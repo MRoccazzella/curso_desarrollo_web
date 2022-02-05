@@ -1,0 +1,674 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gridArea{
+    display: grid;
+    grid-template-areas: "header header header"
+    "main main main"
+    "footer footer footer";
+    grid-template-rows: 25% auto 5%;
+    
+}
+
+body{
+    display: grid;
+}
+                    /*HEADER*/
+header{
+    grid-area: header;
+    background: url(../image/fondo_header.png);
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+h1{
+    display: flex;
+    align-items: flex-end;
+    color: #E2B903;
+    width: 20%;
+    height: 85%;
+    font-size: xx-large;
+    justify-content: flex-start;
+    font-size: 4em;
+}
+h1 span{
+    display: flex;
+    color: black;
+    
+}
+nav{
+    background-color: black;
+    display: flex;
+    padding: 10px; 
+    height: 20%; 
+    justify-content: flex-end;
+    width: 100vw;
+}
+nav ul{
+    display: flex;
+    background-color: transparent;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+}
+nav ul li{
+    display: flex;
+    background-color: transparent;
+    font-size: 1em;
+    width: 15%;
+    align-items: center center;
+    justify-content: center;
+}
+li a{
+    background-color: transparent;
+    color: #E2B903;
+    text-decoration: none;
+    display: flex;  
+}
+/*FIN DEL HEADER*/
+
+/* index.html MAIN*/
+.mainIndex{
+    grid-area: main;
+    font-family: Verdana;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../image/fondo-prueba.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: flex;
+    background-size: cover;
+}
+.mainUno{
+    width: 50%;
+    height: 100%;
+    
+}
+.pUno{
+    font-size: 5rem;
+    width: 40%;
+    display: flex;
+    color: #E2B903;
+    text-align: center;
+    margin-top: 25% ;
+    font-family: 'Nunito', sans-serif;
+    margin-left: 30%;
+    
+}
+.mainDos{
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+}
+.mainDos h3{
+    width: max-content;
+    border: #ffffff double 1px;
+    color: #bd9c0b;
+    padding: 10px;
+    font-family: 'Nunito',sans-serif;
+    margin: 10% 0 5% 27%;
+    text-align: center;
+    font-size: 2rem;
+
+}
+.video{
+    width: 50%;
+    height: 50%;
+    border: solid 3px black;
+    margin: 5% 0 0 20%;
+}
+        /*FIN DE index.html MAIN*/
+
+        /* service.html MAIN */
+.mainServices{
+    grid-area: main;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/fondo-prueba.jpg);    background-repeat: no-repeat;
+    background-position: center top;
+    flex-direction: row;
+    background-size: cover;
+}
+main h2{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    margin: 5% 0 0 45%;
+    font-family: 'Cairo', sans-serif;
+    font-size: xx-large;
+    border: 5px solid #E2B903;
+    padding: 1%;
+    color: #EDF2F5;
+}
+.services{
+    display: flex;
+    margin: 5% 2.5% 0 2.5%;
+    height: max-content;
+}
+.services div{
+    width: 20%;
+    height: fit-content;
+    margin-right: 5%;
+    justify-content: center;
+} 
+.services div h3{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #EDF2F5;    
+    font-family: 'Cairo', sans-serif;
+    font-size: x-large;
+}
+
+.services div p{
+    margin-top: 20%;
+    color: #ffffff;
+    text-align: justify;
+    border: #E2B903 double 5px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 1rem;
+
+}
+.finServicios{
+    margin: 60px 0 40px 40%;
+    color: #ffffff;
+    padding: 15px;
+    height: max-content;
+
+}
+            /*FIN DE service.html MAIN*/
+
+            /* aboutus.html MAIN */
+.mainAboutUs{
+    display: flex;
+    grid-area: main;
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../image/fondo-prueba.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    flex-direction: row;
+    background-size: cover;
+}
+.mainAboutUs div{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    margin-top: 60px;
+    justify-content: center;   
+}
+.borderAboutUs{
+    border: white solid 5px;
+    border-radius: 5%;
+}
+
+.mainAboutUs div h3{
+text-align: center;
+margin-bottom: 5%;
+color: #EDF2F5;
+}
+.mainAboutUs div p{
+    width: 80%;
+    display: flex;
+    text-align: justify; 
+    font-size: small;
+    margin-left: 10%;
+    color: #EDF2F5;
+}
+.mainAboutUs div img{
+    width: 80%;
+    margin-left: 10%;
+}
+            /*FIN DE aboutus.html MAIN*/
+            /* results.html MAIN */
+.mainResults{
+    display: flex;
+    grid-area: main;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/fondo-prueba.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    flex-direction: column;
+    background-size: cover;
+}
+.divResults{
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    margin-top: 2.5%;
+}
+.divResultsDif{
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    margin-top: 2.5%;
+    justify-content: flex-end;
+}
+.divResults img{
+margin-left: 5%;
+}
+.divResultsDif img{
+    margin-right: 5%;
+    }
+.divResults p{
+    width: 50%;
+    height:  15vh;
+    margin-left: 5%;
+    display: flex;
+    text-align: center justify;
+    color: #EDF2F5;
+    margin-top: 40px;
+}
+.divResultsDif p{
+    width: 50%;
+    height:  15vh;
+    margin-right: 5%;
+    display: flex;
+    text-align: center justify;
+    color: #EDF2F5;
+    margin-top: 40px;
+}
+            /*FIN DE results.html MAIN*/
+            /* contactus.html MAIN */
+.mainContactUs{
+    display: flex;
+    grid-area: main;
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../image/fondo-prueba.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    flex-direction: column;
+    background-size: cover;
+}
+.tituloContactUs{
+    display: flex;
+    justify-content: center;
+    height: 7.5%;
+    margin-top: 7.5%;
+    font-size: xx-large;
+    color: #EDF2F5;
+}
+.contactUsName{
+    width: 75%;
+    height: 25px;
+    display: flex;
+    margin: 5px 0 0 12.5%;
+}
+.contactUsSurname{
+    width: 75%;
+    height: 25px;
+    display: flex;
+    margin: 5px 0 0 12.5%;
+}
+.contactUsEmail{
+    width: 75%;
+    height: 25px;
+    display: flex;
+    margin: 5px 0 0 12.5%;
+}
+.contactUsPass{
+    width: 75%;
+    height: 25px;
+    display: flex;
+    margin: 5px 0 0 12.5%;
+}
+.ContactUsTexto{
+    color: white;
+}
+textarea{
+    width: 80%;
+    margin-left: 10%;
+    height: 100px;
+}
+.formulario div{
+    display: flex;
+    flex-direction: row;
+}
+.terminos{
+    width: 80%;
+    color: white;
+    font-size: small;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 5px;
+}
+.checkbox{
+    margin-left: 10px; 
+}
+.contactUsBotones{
+    display: flex;
+    flex-direction: row;
+    margin-left: 42%;
+    margin-top: 10px;
+    width: 15%
+}
+.submit{
+    background-color: #E2B903;
+    width: 25%;
+    color: black;
+    font-size: medium;
+}
+.reset{
+    margin-left: 50%;
+    background-color: #E2B903;
+    width: 25%;
+    color: black;
+    font-size: medium;
+}
+form{
+    display: flex;
+    width: 100%;
+    height: 40%;
+    flex-direction: column;
+    padding: 5px;    
+}
+.formulario{
+    border: #8a7000 solid 5px;
+    border-radius: 10px;
+    text-align: center;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: max-content;
+    margin-left: 42%;
+}
+.formulario select{
+    color:#EDF2F5; /*no se por que no cambia de color*/
+}
+.centrar{
+    text-align: center;
+}
+            /*FIN DE contactus.html MAIN*/
+
+                    /*FOOTER*/
+footer{
+    background-color: rgb(43, 40, 40);
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    
+}
+footer div{
+    display: flex;
+    background-color: transparent;
+    width: 10%;
+    height: 100%;
+}
+footer div img{
+    display: flex;
+    background-color: transparent;
+    width: 20%;
+    height: 60%;
+    margin-top: 10px;
+    margin-left: 10px;
+    justify-content: center;
+}
+footer p{
+    
+    display: flex;
+    margin-top: 10px;
+    color: black;
+    width: 35%;
+    height: 100%;
+    text-align: center center;
+    margin-left: 30%;
+    font-size: 1.25rem;
+
+}
+footer a{
+    display: flex;
+    width: fit-content;
+    color: black;
+    text-decoration: none;
+    justify-content: flex-end;
+    margin-left: 15%;
+    margin-top: 10px;
+    font-size: 1.25rem;
+
+}
+.border{
+    border: solid 1px white;
+}
+                /* FIN DEL FOOTER */
+
+                /*Mobile*/
+@media (max-width:480px){
+    .mainIndex{
+        grid-area: main;
+        font-family: Verdana;
+        width: 100%;
+        height: 100%;
+        background-image: url(../image/fondo-prueba.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        display: flex;
+        background-size: cover;
+        flex-direction: column;
+    }
+    .mainUno{
+        display: flex;
+        width: 100%;
+        height: max-content;
+    }
+    .mainDos{
+        width: 50%;
+        height: max-content;
+        flex-direction: column;
+        margin-left: 25%;
+    }
+    .mainDos h3{
+        width: max-content;
+        border: #ffffff double 1px;
+        color: #bd9c0b;
+        padding: 10px;
+        font-family: 'Nunito',sans-serif;
+        font-size: 2rem;
+        margin-left: 30px;
+        margin-top: 100px;
+    }
+    .video{
+        width: 75%;
+        height: 50%;
+        border: solid 3px black;
+        margin-bottom: 200px;
+        margin-left: 60px;
+
+    }
+    
+    
+    /*Mobile Querie services.htmk*/
+
+    .mainServices{
+        grid-area: main;
+        font-family: sans-serif;
+        width: 100%;
+        height: 100%;
+        background-image: url(../image/fondo-prueba.jpg);    background-repeat: no-repeat;
+        background-position: center top;
+        flex-direction: column;
+        background-size: cover;
+        display: flex;
+    }
+    main h2{
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        margin: 5% 0 50px 40%;
+        font-family: 'Cairo', sans-serif;
+        font-size: xx-large;
+        border: 5px solid #E2B903;
+        padding: 1%;
+        color: #EDF2F5;
+    }
+    .services{
+        display: flex;
+        margin: 5% 2.5% 0 32%;
+        height: max-content;
+        flex-direction: column;
+        width: 80%;
+        
+    }
+    .services div{
+        width: 50%;
+        height: fit-content;
+        margin-right: 5%;
+        justify-content: center;
+    } 
+    .services div h3{
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 40px;
+        color: #EDF2F5;    
+        font-family: 'Cairo', sans-serif;
+        font-size: x-large;
+    }
+    
+    .services div p{
+        margin-top: 5px;
+        color: #ffffff;
+        text-align: justify;
+        border: #E2B903 double 5px;
+        padding: 10px;
+        font-family: sans-serif;
+        font-size: 1rem;
+    
+    }
+    .finServicios{
+        margin: 60px 0 40px 27%;
+        color: #ffffff;
+        padding: 15px;
+        height: max-content;
+    
+    }
+    footer p{
+        font-size: 1.25rem;
+        display: flex;
+        margin-top: 30px;
+        color: black;
+        width: 50%;
+        height: 100%;
+        margin-left: 27%;
+        align-content: center;
+    }
+    footer a{
+        display: flex;
+        width: 15%;
+        color: black;
+        text-decoration: none;
+        justify-content: flex-end;
+        margin-left: 10%;
+        margin-top: 30px;
+        font-size: 1.25rem;
+        margin-right: 10px;
+    }
+    footer div img{
+        display: flex;
+        background-color: transparent;
+        width: 40%;
+        height: 50%;
+        margin-top: 20px;
+        margin-left: 10px;
+        justify-content: center;
+    }
+}
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1023px){
+    
+    .mainServices{
+        grid-area: main;
+        font-family: sans-serif;
+        width: 100%;
+        height: 100%;
+        background-image: url(../image/fondo-prueba.jpg);    background-repeat: no-repeat;
+        background-position: center top;
+        flex-direction: column;
+        background-size: cover;
+        display: flex;
+    }
+    main h2{
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        margin: 5% 0 50px 42%;
+        font-family: 'Cairo', sans-serif;
+        font-size: xx-large;
+        border: 5px solid #E2B903;
+        padding: 1%;
+        color: #EDF2F5;
+    }
+    .services{
+        display: flex;
+        margin: 5% 2.5% 0 32%;
+        height: max-content;
+        flex-direction: column;
+        width: 80%;   
+    }
+    .services div{
+        width: 50%;
+        height: fit-content;
+        margin-right: 5%;
+        justify-content: center;
+    } 
+    .services div h3{
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 40px;
+        color: #EDF2F5;    
+        font-family: 'Cairo', sans-serif;
+        font-size: x-large;
+    }
+    .services div p{
+        margin-top: 5px;
+        color: #ffffff;
+        text-align: justify;
+        border: #E2B903 double 5px;
+        padding: 10px;
+        font-family: sans-serif;
+        font-size: 1rem;
+    }
+    .finServicios{
+        margin: 60px 0 40px 27%;
+        color: #ffffff;
+        padding: 15px;
+        height: max-content;
+    }
+    footer p{
+        font-size: 1rem;
+        display: flex;
+        margin-top: 20px;
+        color: black;
+        width: 100%;
+        height: 100%;
+        margin-left: 37%; 
+    }
+    footer a{
+        display: flex;
+        width: 50%;
+        color: black;
+        text-decoration: none;
+        justify-content: flex-end;
+        
+        margin-top: 15px;
+        font-size: 1.25rem;
+        margin-right: 10px;
+    }
+    footer div img{
+        display: flex;
+        background-color: transparent;
+        width: 40%;
+        height: 50%;
+        margin-top: 15px;
+        margin-left: 10px;
+        justify-content: center;
+    }
+}
