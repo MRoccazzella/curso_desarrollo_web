@@ -18,7 +18,7 @@ body{
                     /*HEADER*/
 header{
     grid-area: header;
-    background: url(../image/fondo_header.png);
+    background: url("../image/fondo_header.png");
     background-repeat: no-repeat;
     background-position: center center; 
 }
