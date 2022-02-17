@@ -604,15 +604,6 @@ li a:hover{
         display: flex;
     }
     main h2{
-        height: 25vh;
-        width: 40%;
-        display: flex;
-        font-family: 'Cairo', sans-serif;
-        font-size: xx-large;
-        color: #EDF2F5;
-        justify-content: center;
-    }
-    main h2{
         height: 5vh;
         width: 40%;
         display: flex;
