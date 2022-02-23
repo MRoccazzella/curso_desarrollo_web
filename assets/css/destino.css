@@ -1,3 +1,4 @@
+/*Variables*/
 * {
   margin: 0;
   padding: 0;
@@ -26,8 +27,8 @@ header h1 {
   display: flex;
   align-items: flex-end;
   color: #E2B903;
-  width: 20%;
   height: 65%;
+  width: 20%;
   font-size: xx-large;
   justify-content: flex-start;
   font-size: 4em;
@@ -40,8 +41,8 @@ header h1 span {
 nav {
   background-color: black;
   display: flex;
-  height: 35%;
   justify-content: flex-end;
+  height: 35%;
   width: 100%;
 }
 nav ul {
@@ -69,22 +70,25 @@ nav ul li a {
   padding-top: 5px;
 }
 
-/*Fin Header*/
-/*index*/
-.mainIndex {
-  grid-area: main;
-  font-family: Verdana;
-  width: 100%;
-  height: 100vh;
+.mainGral, .mainContactUs, .mainResults, .mainAboutUs, .mainServices, .mainIndex {
   background-image: url(../image/fondo-prueba.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   display: flex;
   background-size: cover;
 }
+
+/*Fin Header*/
+/*index*/
+.mainIndex {
+  height: 100vh;
+  width: 100%;
+  grid-area: main;
+  font-family: Verdana;
+}
 .mainIndex .mainUno {
-  width: 50%;
   height: 100%;
+  width: 50%;
 }
 .mainIndex .mainUno .pUno {
   font-size: 5rem;
@@ -97,8 +101,8 @@ nav ul li a {
   margin-left: 25%;
 }
 .mainIndex .mainDos {
-  width: 50%;
   height: 100%;
+  width: 50%;
   flex-direction: column;
 }
 .mainIndex .mainDos h3 {
@@ -112,8 +116,8 @@ nav ul li a {
   font-size: 2rem;
 }
 .mainIndex .mainDos .video {
-  width: 60%;
   height: 50%;
+  width: 60%;
   border: solid 3px black;
   margin: 10% 0 0 20%;
 }
@@ -123,13 +127,10 @@ nav ul li a {
 .mainServices {
   grid-area: main;
   font-family: sans-serif;
-  width: 100%;
   height: 100%;
-  background-image: url(../image/fondo-prueba.jpg);
-  background-repeat: no-repeat;
-  background-position: center top;
+  width: 100%;
   flex-direction: row;
-  background-size: cover;
+  display: inline-block;
 }
 .mainServices h2 {
   height: 5vh;
@@ -148,8 +149,8 @@ nav ul li a {
   height: max-content;
 }
 .mainServices .services div {
-  width: 20%;
   height: fit-content;
+  width: 20%;
   margin-right: 5%;
   justify-content: center;
 }
@@ -170,10 +171,10 @@ nav ul li a {
   font-size: 1rem;
 }
 .mainServices .finServicios {
+  height: max-content;
   width: 40%;
   color: #ffffff;
   padding: 15px;
-  height: max-content;
   margin-left: 30%;
   margin-top: 5%;
   text-align: center;
@@ -182,22 +183,17 @@ nav ul li a {
 /*Fin Services*/
 /*AboutUs*/
 .mainAboutUs {
-  display: flex;
+  height: 100vh;
+  width: 100vw;
   grid-area: main;
   font-family: sans-serif;
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../image/fondo-prueba.jpg);
-  background-repeat: no-repeat;
-  background-position: center top;
   flex-direction: row;
-  background-size: cover;
 }
 .mainAboutUs div {
+  height: 60%;
   width: 33%;
   display: flex;
   flex-direction: column;
-  height: 60%;
   margin-top: 20vh;
   justify-content: center;
 }
@@ -228,33 +224,28 @@ nav ul li a {
 /*Fin AboutUs*/
 /*Results*/
 .mainResults {
-  display: flex;
+  height: 100%;
+  width: 100%;
   grid-area: main;
   font-family: sans-serif;
-  width: 100%;
-  height: 100%;
-  background-image: url(../image/fondo-prueba.jpg);
-  background-repeat: no-repeat;
-  background-position: center top;
   flex-direction: column;
-  background-size: cover;
   padding-bottom: 50px;
 }
 .mainResults .divResults {
+  height: 40%;
+  width: 80%;
   display: flex;
   flex-direction: row;
-  height: 40%;
   margin-top: 5%;
   border: #E2B903 1px double;
-  width: 80%;
   margin-left: 2.5%;
 }
 .mainResults .divResults img {
   margin-left: 5%;
 }
 .mainResults .divResults p {
-  width: 50%;
   height: 15vh;
+  width: 50%;
   margin-left: 5%;
   display: flex;
   text-align: center justify;
@@ -263,21 +254,21 @@ nav ul li a {
   font-size: 1.25rem;
 }
 .mainResults .divResultsDif {
+  height: 40%;
+  width: 80%;
   display: flex;
   flex-direction: row;
-  height: 40%;
   margin-top: 2.5%;
   margin-left: 17.5%;
   border: #E2B903 1px double;
-  width: 80%;
   justify-content: flex-end;
 }
 .mainResults .divResultsDif img {
   margin-right: 5%;
 }
 .mainResults .divResultsDif p {
-  width: 50%;
   height: 15vh;
+  width: 50%;
   margin-right: 5%;
   display: flex;
   text-align: center justify;
@@ -289,16 +280,11 @@ nav ul li a {
 /*Fin Results*/
 /*ContactUs*/
 .mainContactUs {
-  display: flex;
+  height: 100vh;
+  width: 100vw;
   grid-area: main;
   font-family: sans-serif;
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../image/fondo-prueba.jpg);
-  background-repeat: no-repeat;
-  background-position: center top;
   flex-direction: column;
-  background-size: cover;
 }
 .mainContactUs .tituloContactUs {
   display: flex;
@@ -309,45 +295,27 @@ nav ul li a {
   color: #EDF2F5;
 }
 .mainContactUs form {
-  display: flex;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  display: flex;
   flex-direction: column;
   padding: 15px;
 }
 .mainContactUs form .formulario {
+  height: 45vh;
+  width: 25%;
   border: #8a7000 solid 5px;
   border-radius: 10px;
   text-align: center;
-  width: 25%;
-  height: 45vh;
   display: flex;
   flex-direction: column;
   align-content: center;
   margin-left: 37.5%;
   padding-top: 20px;
 }
-.mainContactUs form .formulario .contactUsName {
-  width: 75%;
+.mainContactUs form .formulario .campos {
   height: 25px;
-  display: flex;
-  margin: 5px 0 0 12.5%;
-}
-.mainContactUs form .formulario .contactUsSurname {
   width: 75%;
-  height: 25px;
-  display: flex;
-  margin: 5px 0 0 12.5%;
-}
-.mainContactUs form .formulario .contactUsEmail {
-  width: 75%;
-  height: 25px;
-  display: flex;
-  margin: 5px 0 0 12.5%;
-}
-.mainContactUs form .formulario .contactUsPass {
-  width: 75%;
-  height: 25px;
   display: flex;
   margin: 5px 0 0 12.5%;
 }
@@ -355,9 +323,9 @@ nav ul li a {
   color: white;
 }
 .mainContactUs form .formulario textarea {
+  height: 100px;
   width: 80%;
   margin-left: 10%;
-  height: 100px;
 }
 .mainContactUs form .formulario div {
   display: flex;
@@ -379,7 +347,7 @@ nav ul li a {
   width: 25%;
   margin-left: 37.5%;
 }
-.mainContactUs form .contactUsBotones .submit {
+.mainContactUs form .contactUsBotones .submit, .mainContactUs form .contactUsBotones .reset {
   background-color: #E2B903;
   width: 25%;
   color: white;
@@ -387,10 +355,6 @@ nav ul li a {
   cursor: pointer;
 }
 .mainContactUs form .contactUsBotones .reset {
-  background-color: #E2B903;
-  width: 25%;
-  color: white;
-  font-size: large;
   margin-left: 50%;
   cursor: pointer;
 }
@@ -402,30 +366,30 @@ footer {
   grid-area: footer;
   display: flex;
   flex-direction: row;
-  width: 100%;
   height: 5vh;
+  width: 100%;
 }
 footer div {
+  height: 100%;
+  width: 10%;
   display: flex;
   background-color: transparent;
-  width: 10%;
-  height: 100%;
 }
 footer div img {
+  height: 60%;
+  width: 20%;
   display: flex;
   background-color: transparent;
-  width: 20%;
-  height: 60%;
   margin-top: 10px;
   margin-left: 10px;
   justify-content: center;
 }
 footer p {
+  height: 100%;
+  width: 80%;
   display: flex;
   margin-top: 10px;
   color: black;
-  width: 80%;
-  height: 100%;
   font-size: 1.25rem;
   justify-content: center;
 }
@@ -754,7 +718,7 @@ li a:hover {
     width: 60%;
     margin-left: 20%;
   }
-  .contactUsBotones .submit {
+  .contactUsBotones .submit, .mainContactUs form .contactUsBotones .reset {
     background-color: #E2B903;
     width: 50%;
     color: white;
@@ -1052,7 +1016,7 @@ li a:hover {
     width: 40%;
     margin-left: 30%;
   }
-  .contactUsBotones .submit {
+  .contactUsBotones .submit, .mainContactUs form .contactUsBotones .reset {
     background-color: #E2B903;
     width: 25%;
     color: white;

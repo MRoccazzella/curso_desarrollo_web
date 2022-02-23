@@ -1,4 +1,15 @@
+
+
+/*Variables*/
+$amarillo: #E2B903;
+
+@mixin sizes($width,$height){
+    height: $height;
+    width: $width;
+}
+
 *{
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,7 +28,7 @@ body{
 }
         /*Header*/
 header{
-     grid-area: header;
+    grid-area: header;
     background-color: #ffffff; 
     a{
         text-decoration: none;
@@ -25,9 +36,8 @@ header{
     h1{
         display: flex;
         align-items: flex-end;
-        color: #E2B903;
-        width: 20%;
-        height: 65%;
+        color: $amarillo;
+        @include sizes(20%,65%);
         font-size: xx-large;
         justify-content: flex-start;
         font-size: 4em;
@@ -40,9 +50,8 @@ header{
 nav{
     background-color: black;
     display: flex;
-    height: 35%; 
     justify-content: flex-end;
-    width: 100%;
+    @include sizes(100%,35%);
     ul{
         display: flex;
         background-color: transparent;
@@ -57,7 +66,7 @@ nav{
             justify-content: center;
             a{
                 background-color: transparent;
-                color: #E2B903;
+                color: $amarillo;
                 text-decoration: none;
                 display: flex;  
                 height: 100%;
@@ -68,27 +77,27 @@ nav{
         }
     }    
 }
-
-/*Fin Header*/
-/*index*/
-.mainIndex{
-    grid-area: main;
-    font-family: Verdana;
-    width: 100%;
-    height: 100vh;
+.mainGral{
     background-image: url(../image/fondo-prueba.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     display: flex;
     background-size: cover;
+}
+/*Fin Header*/
+/*index*/
+.mainIndex{
+    @extend .mainGral;
+    @include sizes(100%,100vh);
+    grid-area: main;
+    font-family: Verdana;
     .mainUno{
-        width: 50%;
-        height: 100%;
+        @include sizes(50%,100%);
         .pUno{
             font-size: 5rem;
             width: 50%;
             display: flex;
-            color: #E2B903;
+            color: $amarillo;
             text-align: center;
             margin-top: 25% ;
             font-family: 'Nunito', sans-serif;
@@ -96,8 +105,7 @@ nav{
         }
     }
     .mainDos{
-        width: 50%;
-        height: 100%;
+        @include sizes(50%,100%);
         flex-direction: column;
         h3{
             width: 50%;
@@ -110,8 +118,7 @@ nav{
             font-size: 2rem;
         }
         .video{
-            width: 60%;
-            height: 50%;
+            @include sizes(60%,50%);
             border: solid 3px black;
             margin: 10% 0 0 20%;
         }
@@ -120,17 +127,14 @@ nav{
 /*Fin index*/
 /*Services*/
 .mainServices{
+    @extend .mainGral;
     grid-area: main;
     font-family: sans-serif;
-    width: 100%;
-    height: 100%;
-    background-image: url(../image/fondo-prueba.jpg);    background-repeat: no-repeat;
-    background-position: center top;
-    flex-direction: row;
-    background-size: cover; 
+    @include sizes(100%,100%);
+    flex-direction: row; 
+    display: inline-block;
     h2{
-        height: 5vh;
-        width: 40%;
+        @include sizes(40%,5vh);
         display: flex;
         font-family: 'Cairo', sans-serif;
         font-size: xx-large;
@@ -144,8 +148,7 @@ nav{
         margin: 5% 2.5% 0 2.5%;
         height: max-content;
         div{
-            width: 20%;
-            height: fit-content;
+            @include sizes(20%,fit-content);
             margin-right: 5%;
             justify-content: center;
             h3{
@@ -159,7 +162,7 @@ nav{
                 margin-top: 20%;
                 color: #ffffff;
                 text-align: justify;
-                border: #E2B903 double 5px;
+                border: $amarillo double 5px;
                 padding: 10px;
                 font-family: sans-serif;
                 font-size: 1rem;
@@ -167,10 +170,9 @@ nav{
         } 
     }
     .finServicios{
-        width: 40%;
+        @include sizes(40%,max-content);
         color: #ffffff;
         padding: 15px;
-        height: max-content;
         margin-left: 30%;
         margin-top: 5%;
         text-align: center;
@@ -179,21 +181,15 @@ nav{
 /*Fin Services*/
 /*AboutUs*/
 .mainAboutUs{
-    display: flex;
+    @extend .mainGral;
+    @include sizes(100vw,100vh);
     grid-area: main;
     font-family: sans-serif;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../image/fondo-prueba.jpg);
-    background-repeat: no-repeat;
-    background-position: center top;
     flex-direction: row;
-    background-size: cover;
     div{
-        width: 33%;
+        @include sizes(33%,60%);
         display: flex;
         flex-direction: column;
-        height: 60%;
         margin-top: 20vh;
         justify-content: center;
         h3{
@@ -220,35 +216,27 @@ nav{
     border: white solid 5px;
     border-radius: 5%;
 }
-
 /*Fin AboutUs*/
 /*Results*/
 .mainResults{
-    display: flex;
+    @extend .mainGral;
+    @include sizes(100%,100%);
     grid-area: main;
     font-family: sans-serif;
-    width: 100%;
-    height: 100%;
-    background-image: url(../image/fondo-prueba.jpg);
-    background-repeat: no-repeat;
-    background-position: center top;
     flex-direction: column;
-    background-size: cover;
     padding-bottom: 50px;
     .divResults{
+        @include sizes(80%,40%);
         display: flex;
         flex-direction: row;
-        height: 40%;
         margin-top: 5%;
-        border: #E2B903 1px double;
-        width: 80%;
+        border: $amarillo 1px double;
         margin-left: 2.5%;
         img{
             margin-left: 5%;
         }
         p{
-            width: 50%;
-            height:  15vh;
+            @include sizes(50%,15vh);
             margin-left: 5%;
             display: flex;
             text-align: center justify;
@@ -258,20 +246,18 @@ nav{
         }   
     }
     .divResultsDif{
+        @include sizes(80%,40%);
         display: flex;
         flex-direction: row;
-        height: 40%;
         margin-top: 2.5%;
         margin-left: 17.5%;
-        border: #E2B903 1px double;
-        width: 80%;
+        border: $amarillo 1px double;
         justify-content: flex-end;
         img{
             margin-right: 5%;
         }
         p{
-            width: 50%;
-            height:  15vh;
+            @include sizes(50%,15vh);
             margin-right: 5%;
             display: flex;
             text-align: center justify;
@@ -280,22 +266,15 @@ nav{
             font-size: 1.25rem;
         }
     }
-
 }
 /*Fin Results*/
 /*ContactUs*/
 .mainContactUs{
-    display: flex;
+    @extend .mainGral;
+    @include sizes(100vw,100vh);
     grid-area: main;
     font-family: sans-serif;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../image/fondo-prueba.jpg);
-    background-repeat: no-repeat;
-    background-position: center top;
     flex-direction: column;
-    background-size: cover;
-
     .tituloContactUs{
         display: flex;
         justify-content: center;
@@ -305,43 +284,22 @@ nav{
         color: #EDF2F5;
     }
     form{
+        @include sizes(100%,100%);
         display: flex;
-        width: 100%;
-        height: 100%;
         flex-direction: column;
         padding: 15px;
         .formulario{
+            @include sizes(25%,45vh);
             border: #8a7000 solid 5px;
             border-radius: 10px;
             text-align: center;
-            width: 25%;
-            height: 45vh;
             display: flex;
             flex-direction: column;
             align-content: center;
             margin-left: 37.5%;
             padding-top: 20px;
-            .contactUsName{
-                width: 75%;
-                height: 25px;
-                display: flex;
-                margin: 5px 0 0 12.5%;
-            }
-            .contactUsSurname{
-                width: 75%;
-                height: 25px;
-                display: flex;
-                margin: 5px 0 0 12.5%;
-            }
-            .contactUsEmail{
-                width: 75%;
-                height: 25px;
-                display: flex;
-                margin: 5px 0 0 12.5%;
-            }
-            .contactUsPass{
-                width: 75%;
-                height: 25px;
+            .campos{
+                @include sizes(75%,25px);
                 display: flex;
                 margin: 5px 0 0 12.5%;
             }
@@ -349,9 +307,8 @@ nav{
                 color: white;
             }
             textarea{
-                width: 80%;
+                @include sizes(80%,100px);
                 margin-left: 10%;
-                height: 100px;
             }
             div{
                 display: flex;
@@ -374,17 +331,14 @@ nav{
             width: 25%;
             margin-left: 37.5%;
             .submit{
-                background-color: #E2B903;
+                background-color: $amarillo;
                 width: 25%;
                 color: white;
                 font-size: large;
                 cursor: pointer;
             }
             .reset{
-                background-color: #E2B903;
-                width: 25%;
-                color: white;
-                font-size: large;
+                @extend .submit;
                 margin-left: 50%;
                 cursor: pointer;
             }
@@ -399,51 +353,45 @@ background-color: rgb(43, 40, 40);
 grid-area: footer;
 display: flex;
 flex-direction: row;
-width: 100%;
-height: 5vh;
-div{
-    display: flex;
-    background-color: transparent;
-    width: 10%;
-    height: 100%;
-    img{
+@include sizes(100%,5vh);
+    div{
+        @include sizes(10%,100%);
         display: flex;
         background-color: transparent;
-        width: 20%;
-        height: 60%;
+        img{
+            @include sizes(20%,60%);
+            display: flex;
+            background-color: transparent;
+            margin-top: 10px;
+            margin-left: 10px;
+            justify-content: center;
+        }
+    }
+    p{
+        @include sizes(80%,100%);
+        display: flex;
         margin-top: 10px;
-        margin-left: 10px;
+        color: black;
+        font-size: 1.25rem;
         justify-content: center;
     }
-}
-p{
-    display: flex;
-    margin-top: 10px;
-    color: black;
-    width: 80%;
-    height: 100%;
-    font-size: 1.25rem;
-    justify-content: center;
-}
-a{
-    display: flex;
-    width: 10%;
-    color: black;
-    text-decoration: none;
-    justify-content: center;
-    
-    margin-top: 10px;
-    font-size: 1.25rem;
+    a{
+        display: flex;
+        width: 10%;
+        color: black;
+        text-decoration: none;
+        justify-content: center;
+        margin-top: 10px;
+        font-size: 1.25rem;
 
-}
+    }
 }
 /*Fin Footer*/
 
-
-                   
+              
         /*Animaciones, tranasiciones, efectos*/
 li a:hover{
-    background-color: #E2B903;
+    background-color: $amarillo;
     color: black;
     width: 70%;
     text-align: center;
@@ -492,7 +440,7 @@ li a:hover{
     h1{
         display: flex;
         align-items: flex-end;
-        color: #E2B903;
+        color: $amarillo;
         width: 80%;
         height: 75%;
         font-size: xx-large;
@@ -514,7 +462,7 @@ li a:hover{
             justify-content: center;
             a{
                 background-color: transparent;
-                color: #E2B903;
+                color: $amarillo;
                 text-decoration: none;
                 display: flex;  
                 height:100%;
@@ -545,7 +493,7 @@ li a:hover{
                 font-size: 5rem;
                 width: 80%;
                 display: flex;
-                color: #E2B903;
+                color: $amarillo;
                 text-align: center;
                 margin-top: 15% ;
                 font-family: 'Nunito', sans-serif;
@@ -614,7 +562,7 @@ li a:hover{
                     margin-top: 5px;
                     color: #ffffff;
                     text-align: justify;
-                    border: #E2B903 double 5px;
+                    border: $amarillo double 5px;
                     padding: 10px;
                     font-family: sans-serif;
                     font-size: 1rem;
@@ -673,7 +621,7 @@ li a:hover{
             flex-direction: row;
             height: 30vh;
             margin-top: 5%;
-            border: #E2B903 1px double;
+            border: $amarillo 1px double;
             width: 80%;
             margin-left: 2.5%;
             p{
@@ -697,7 +645,7 @@ li a:hover{
             height: 30vh;
             margin-top: 2.5%;
             margin-left: 17.5%;
-            border: #E2B903 1px double;
+            border: $amarillo 1px double;
             width: 80%;
             justify-content: flex-end;
             padding-left: 5%;
@@ -748,14 +696,14 @@ li a:hover{
         width: 60%;
         margin-left: 20%;
         .submit{
-            background-color: #E2B903;
+            background-color: $amarillo;
             width: 50%;
             color: white;
             font-size: small;
             cursor: pointer;
         }
         .reset{
-            background-color: #E2B903;
+            background-color: $amarillo;
             width: 50%;
             color: white;
             font-size: small;
@@ -804,7 +752,7 @@ li a:hover{
         justify-content: center;
         a{
             background-color: transparent;
-            color: #E2B903;
+            color: $amarillo;
             text-decoration: none;
             display: flex;  
             height:100%;
@@ -832,7 +780,7 @@ li a:hover{
                 font-size: 5rem;
                 width: 80%;
                 display: flex;
-                color: #E2B903;
+                color: $amarillo;
                 text-align: center;
                 margin-top: 5% ;
                 font-family: 'Nunito', sans-serif;
@@ -907,7 +855,7 @@ li a:hover{
                     margin-top: 5px;
                     color: #ffffff;
                     text-align: justify;
-                    border: #E2B903 double 5px;
+                    border: $amarillo double 5px;
                     padding: 10px;
                     font-family: sans-serif;
                     font-size: 1rem;
@@ -965,7 +913,7 @@ li a:hover{
             flex-direction: row;
             height: 30vh;
             margin-top: 5%;
-            border: #E2B903 1px double;
+            border: $amarillo 1px double;
             width: 80%;
             margin-left: 2.5%;
             p{
@@ -989,7 +937,7 @@ li a:hover{
             height: 30vh;
             margin-top: 2.5%;
             margin-left: 17.5%;
-            border: #E2B903 1px double;
+            border: $amarillo 1px double;
             width: 80%;
             justify-content: flex-end;
             p{
@@ -1039,14 +987,14 @@ li a:hover{
         width: 40%;
         margin-left: 30%;
         .submit{
-            background-color: #E2B903;
+            background-color: $amarillo;
             width: 25%;
             color: white;
             font-size: small;
             cursor: pointer;
         }
         .reset{
-            background-color: #E2B903;
+            background-color: $amarillo;
             width: 25%;
             color: white;
             font-size: small;
