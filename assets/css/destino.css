@@ -8,7 +8,7 @@
 .gridArea {
   display: grid;
   grid-template-areas: "header header header" "main main main" "footer footer footer";
-  grid-template-rows: 10% auto 5%;
+  grid-template-rows: 7vh auto 4vh;
 }
 
 body {
@@ -18,56 +18,48 @@ body {
 /*Header*/
 header {
   grid-area: header;
-  background-color: #ffffff;
-}
-header a {
-  text-decoration: none;
-}
-header h1 {
-  display: flex;
-  align-items: flex-end;
-  color: #E2B903;
-  height: 65%;
-  width: 20%;
-  font-size: xx-large;
-  justify-content: flex-start;
-  font-size: 4em;
-}
-header h1 span {
-  display: flex;
-  color: black;
+  background-color: black;
+  padding: 0;
+  position: relative;
+  z-index: 1;
 }
 
 nav {
   background-color: black;
-  display: flex;
-  justify-content: flex-end;
-  height: 35%;
-  width: 100%;
-}
-nav ul {
-  display: flex;
-  background-color: transparent;
-  flex-direction: row;
-  width: 100%;
-  justify-content: flex-end;
-}
-nav ul li {
-  display: flex;
-  background-color: transparent;
-  width: 15%;
-  align-items: center center;
-  justify-content: center;
-}
-nav ul li a {
-  background-color: transparent;
-  color: #E2B903;
-  text-decoration: none;
-  display: flex;
+  padding: 0;
   height: 100%;
-  justify-content: center;
-  font-size: x-large;
-  padding-top: 5px;
+}
+nav .navegacion {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+nav .navegacion a {
+  height: 50px;
+}
+nav .navegacion .boton {
+  background-color: white;
+}
+nav .navegacion div {
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+}
+nav .navegacion div div a {
+  text-align: center !important;
+  width: 150px !important;
+  font-size: 1.2em !important;
+  color: #E2B903 !important;
+}
+nav .navegacion .boton {
+  background-color: white;
+}
+nav .navegacion h1 {
+  color: #E2B903;
+}
+nav .navegacion h1 span {
+  color: white;
 }
 
 .mainGral, .mainContactUs, .mainResults, .mainAboutUs, .mainServices, .mainIndex {
@@ -81,17 +73,18 @@ nav ul li a {
 /*Fin Header*/
 /*index*/
 .mainIndex {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   grid-area: main;
   font-family: Verdana;
+  margin-bottom: 30vh;
 }
 .mainIndex .mainUno {
   height: 100%;
   width: 50%;
 }
 .mainIndex .mainUno .pUno {
-  font-size: 5rem;
+  font-size: 5em;
   width: 50%;
   display: flex;
   color: #E2B903;
@@ -113,7 +106,7 @@ nav ul li a {
   font-family: "Nunito", sans-serif;
   margin: 15% 0 0 25%;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2em;
 }
 .mainIndex .mainDos .video {
   height: 50%;
@@ -183,25 +176,30 @@ nav ul li a {
 /*Fin Services*/
 /*AboutUs*/
 .mainAboutUs {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   grid-area: main;
   font-family: sans-serif;
   flex-direction: row;
+  margin-bottom: 30vh;
+  display: flex;
+  justify-content: center;
 }
 .mainAboutUs div {
-  height: 60%;
+  height: max-content;
   width: 33%;
   display: flex;
   flex-direction: column;
   margin-top: 20vh;
   justify-content: center;
+  margin-bottom: 40px;
 }
 .mainAboutUs div h3 {
   text-align: center;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   color: #EDF2F5;
   font-size: 1.5rem;
+  margin-top: 5%;
 }
 .mainAboutUs div p {
   width: 80%;
@@ -232,7 +230,6 @@ nav ul li a {
   padding-bottom: 50px;
 }
 .mainResults .divResults {
-  height: 40%;
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -242,19 +239,18 @@ nav ul li a {
 }
 .mainResults .divResults img {
   margin-left: 5%;
+  position: relative;
+  z-index: 0;
 }
 .mainResults .divResults p {
-  height: 15vh;
-  width: 50%;
   margin-left: 5%;
   display: flex;
   text-align: center justify;
   color: #EDF2F5;
   margin-top: 20px;
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 .mainResults .divResultsDif {
-  height: 40%;
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -265,26 +261,27 @@ nav ul li a {
 }
 .mainResults .divResultsDif img {
   margin-right: 5%;
+  z-index: 0;
 }
 .mainResults .divResultsDif p {
-  height: 15vh;
-  width: 50%;
   margin-right: 5%;
+  margin-left: 5%;
   display: flex;
   text-align: center justify;
   color: #EDF2F5;
   margin-top: 20px;
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 /*Fin Results*/
 /*ContactUs*/
 .mainContactUs {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   grid-area: main;
   font-family: sans-serif;
   flex-direction: column;
+  margin-bottom: 20vh;
 }
 .mainContactUs .tituloContactUs {
   display: flex;
@@ -300,9 +297,10 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   padding: 15px;
+  justify-content: center;
 }
 .mainContactUs form .formulario {
-  height: 45vh;
+  height: 50vh;
   width: 25%;
   border: #8a7000 solid 5px;
   border-radius: 10px;
@@ -326,19 +324,20 @@ nav ul li a {
   height: 100px;
   width: 80%;
   margin-left: 10%;
+  resize: none;
 }
 .mainContactUs form .formulario div {
   display: flex;
   flex-direction: row;
 }
 .mainContactUs form .formulario div .terminos {
-  width: 50%;
+  width: 70%;
   color: white;
   font-size: small;
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
-  margin-left: 25%;
+  margin-left: 12.5%;
 }
 .mainContactUs form .contactUsBotones {
   display: flex;
@@ -348,14 +347,16 @@ nav ul li a {
   margin-left: 37.5%;
 }
 .mainContactUs form .contactUsBotones .submit, .mainContactUs form .contactUsBotones .reset {
-  background-color: #E2B903;
-  width: 25%;
-  color: white;
-  font-size: large;
+  border-radius: 5px;
+  background-color: black;
+  width: 30%;
+  color: #E2B903;
+  font-size: 0.9em;
   cursor: pointer;
+  text-align: center;
 }
 .mainContactUs form .contactUsBotones .reset {
-  margin-left: 50%;
+  margin-left: 40%;
   cursor: pointer;
 }
 
@@ -366,23 +367,26 @@ footer {
   grid-area: footer;
   display: flex;
   flex-direction: row;
-  height: 5vh;
+  height: max-content;
   width: 100%;
+  padding: 0;
 }
 footer div {
   height: 100%;
   width: 10%;
   display: flex;
   background-color: transparent;
+  vertical-align: middle;
 }
 footer div img {
   height: 60%;
-  width: 20%;
+  width: 25%;
   display: flex;
+  position: relative;
   background-color: transparent;
-  margin-top: 10px;
   margin-left: 10px;
-  justify-content: center;
+  margin-top: 10%;
+  vertical-align: middle;
 }
 footer p {
   height: 100%;
@@ -405,19 +409,19 @@ footer a {
 
 /*Fin Footer*/
 /*Animaciones, tranasiciones, efectos*/
-li a:hover {
-  background-color: #E2B903;
-  color: black;
-  width: 70%;
-  text-align: center;
-  height: 100%;
-  display: flex;
-}
-
 .tituloAnimado {
   animation-name: titulo;
   animation-iteration-count: infinite;
   animation-duration: 8s;
+}
+
+.nav-link:hover {
+  background-color: #E2B903;
+  color: black !important;
+  font-size: 1.25em !important;
+  text-align: center;
+  width: 150px;
+  border-radius: 10px;
 }
 
 @keyframes titulo {
@@ -451,45 +455,6 @@ li a:hover {
 /*Fin animaciones*/
 /*Mobile*/
 @media (max-width: 480px) {
-  /*Header*/
-  h1 {
-    display: flex;
-    align-items: flex-end;
-    color: #E2B903;
-    width: 80%;
-    height: 75%;
-    font-size: xx-large;
-    justify-content: flex-start;
-    font-size: 4em;
-    margin-left: 10%;
-  }
-
-  nav {
-    background-color: black;
-    display: flex;
-    height: 25%;
-    justify-content: flex-end;
-    width: 100%;
-  }
-  nav ul li {
-    display: flex;
-    background-color: transparent;
-    width: 20%;
-    align-items: center center;
-    justify-content: center;
-  }
-  nav ul li a {
-    background-color: transparent;
-    color: #E2B903;
-    text-decoration: none;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    font-size: 0.8rem;
-    padding-top: 4.5%;
-  }
-
-  /*Fin Header*/
   /*index*/
   .mainIndex {
     grid-area: main;
@@ -502,6 +467,7 @@ li a:hover {
     display: flex;
     background-size: cover;
     flex-direction: column;
+    margin-bottom: 30vh !important;
   }
   .mainIndex .mainUno {
     display: flex;
@@ -509,7 +475,7 @@ li a:hover {
     height: max-content;
   }
   .mainIndex .mainUno .pUno {
-    font-size: 5rem;
+    font-size: 4em;
     width: 80%;
     display: flex;
     color: #E2B903;
@@ -524,21 +490,21 @@ li a:hover {
     flex-direction: column;
   }
   .mainIndex .mainDos h3 {
-    width: 50%;
+    width: 70%;
     border: #ffffff double 1px;
     color: #bd9c0b;
     padding: 10px;
     font-family: "Nunito", sans-serif;
-    font-size: 2rem;
-    margin-left: 25%;
+    font-size: 2em;
+    margin-left: 15%;
     margin-top: 100px;
   }
   .mainIndex .mainDos .video {
     width: 75%;
     height: 50%;
     border: solid 3px black;
-    margin-bottom: 200px;
-    margin-left: 60px;
+    margin-left: 12.5%;
+    margin-top: 80px;
   }
 
   /*Fin index*/
@@ -629,7 +595,7 @@ li a:hover {
     grid-area: main;
     font-family: sans-serif;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-image: url(../image/fondo-prueba.jpg);
     background-repeat: no-repeat;
     background-position: center top;
@@ -640,7 +606,6 @@ li a:hover {
   .mainResults .divResults {
     display: flex;
     flex-direction: row;
-    height: 30vh;
     margin-top: 5%;
     border: #E2B903 1px double;
     width: 80%;
@@ -648,23 +613,22 @@ li a:hover {
   }
   .mainResults .divResults p {
     width: 100%;
-    height: 15vh;
     display: flex;
     text-align: center justify;
     color: #EDF2F5;
     margin-top: 20px;
-    font-size: 1rem;
+    font-size: 1em;
   }
   .mainResults .divResults img {
     width: 100px;
     height: 100px;
-    margin-top: 75px;
+    margin-top: 20px;
+    float: left !important;
   }
   .mainResults .divResultsDif {
     display: flex;
     flex-direction: row;
-    height: 30vh;
-    margin-top: 2.5%;
+    margin-top: 5%;
     margin-left: 17.5%;
     border: #E2B903 1px double;
     width: 80%;
@@ -673,17 +637,16 @@ li a:hover {
   }
   .mainResults .divResultsDif p {
     width: 100%;
-    height: 15vh;
     display: flex;
     text-align: center justify;
     color: #EDF2F5;
-    font-size: 1rem;
+    font-size: 1em;
     margin-top: 20px;
   }
   .mainResults .divResultsDif img {
     width: 100px;
     height: 100px;
-    margin-top: 75px;
+    margin-top: 20px;
   }
 
   /*Fin Results*/
@@ -692,12 +655,12 @@ li a:hover {
     border: #8a7000 solid 5px;
     border-radius: 10px;
     text-align: center;
-    width: 60%;
+    width: 60% !important;
     height: 45vh;
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin-left: 20%;
+    margin-left: 20% !important;
     padding-top: 20px;
   }
   .formulario .terminos {
@@ -715,23 +678,25 @@ li a:hover {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
-    width: 60%;
-    margin-left: 20%;
+    width: 60% !important;
+    margin-left: 20% !important;
   }
   .contactUsBotones .submit, .mainContactUs form .contactUsBotones .reset {
-    background-color: #E2B903;
-    width: 50%;
-    color: white;
-    font-size: small;
+    border-radius: 5px !important;
+    background-color: black;
+    width: 30% !important;
+    color: #E2B903;
+    font-size: 0.65em !important;
     cursor: pointer;
+    text-align: center;
   }
   .contactUsBotones .reset {
-    background-color: #E2B903;
-    width: 50%;
-    color: white;
-    font-size: small;
-    margin-left: 60%;
+    border-radius: 15px;
+    background-color: black;
+    width: 25%;
+    color: #E2B903;
     cursor: pointer;
+    margin-left: 50% !important;
   }
 
   /*Fin ContactUs*/
@@ -766,35 +731,18 @@ li a:hover {
 /* TABLET */
 @media (min-width: 481px) and (max-width: 1023px) {
   /*index*/
-  nav ul li {
-    display: flex;
-    background-color: transparent;
-    width: 20%;
-    align-items: center center;
-    justify-content: center;
-  }
-  nav ul li a {
-    background-color: transparent;
-    color: #E2B903;
-    text-decoration: none;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    font-size: 1rem;
-    padding-top: 4.5%;
-  }
-
   .mainIndex {
     grid-area: main;
     font-family: Verdana;
     width: 100vw;
-    height: max-content;
+    height: 100%;
     background-image: url(../image/fondo-prueba.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     display: flex;
     background-size: cover;
     flex-direction: column;
+    margin-bottom: 15svh !important;
   }
   .mainIndex .mainUno {
     display: flex;
@@ -914,7 +862,6 @@ li a:hover {
     width: 70%;
     display: flex;
     flex-direction: column;
-    height: 40vh;
     margin-top: 60px;
     margin-left: 15%;
     justify-content: center;
@@ -939,7 +886,6 @@ li a:hover {
   .mainResults .divResults {
     display: flex;
     flex-direction: row;
-    height: 30vh;
     margin-top: 5%;
     border: #E2B903 1px double;
     width: 80%;
@@ -947,22 +893,21 @@ li a:hover {
   }
   .mainResults .divResults p {
     width: 70%;
-    height: 15vh;
     margin-left: 5%;
     display: flex;
     text-align: center justify;
     color: #EDF2F5;
     margin-top: 40px;
+    font-size: 1em;
   }
   .mainResults .divResults img {
     width: 125px;
     height: 125px;
-    margin-top: 62.5px;
+    margin-top: 20px;
   }
   .mainResults .divResultsDif {
     display: flex;
     flex-direction: row;
-    height: 30vh;
     margin-top: 2.5%;
     margin-left: 17.5%;
     border: #E2B903 1px double;
@@ -971,17 +916,17 @@ li a:hover {
   }
   .mainResults .divResultsDif p {
     width: 70%;
-    height: 15vh;
     margin-right: 5%;
     display: flex;
     text-align: center justify;
     color: #EDF2F5;
     margin-top: 40px;
+    font-size: 1em;
   }
   .mainResults .divResultsDif img {
     width: 125px;
     height: 125px;
-    margin-top: 62.5px;
+    margin-top: 20px;
   }
 
   /*Fin Results*/
@@ -990,12 +935,12 @@ li a:hover {
     border: #8a7000 solid 5px;
     border-radius: 10px;
     text-align: center;
-    width: 40%;
+    width: 40% !important;
     height: 45vh;
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin-left: 30%;
+    margin-left: 30% !important;
     padding-top: 20px;
   }
   .formulario .terminos {
@@ -1013,23 +958,25 @@ li a:hover {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
-    width: 40%;
-    margin-left: 30%;
+    width: 40% !important;
+    margin-left: 30% !important;
   }
   .contactUsBotones .submit, .mainContactUs form .contactUsBotones .reset {
-    background-color: #E2B903;
-    width: 25%;
-    color: white;
-    font-size: small;
+    border-radius: 5px !important;
+    background-color: black;
+    width: 30% !important;
+    color: #E2B903;
+    font-size: 0.75em !important;
     cursor: pointer;
+    text-align: center;
   }
   .contactUsBotones .reset {
-    background-color: #E2B903;
+    border-radius: 15px;
+    background-color: black;
     width: 25%;
-    color: white;
-    font-size: small;
-    margin-left: 50%;
+    color: #E2B903;
     cursor: pointer;
+    margin-left: 50% !important;
   }
 
   /*Fin ContactUs*/
@@ -1060,8 +1007,7 @@ li a:hover {
     margin-left: 10px;
     justify-content: center;
   }
-
-  /*Fin Footer*/
 }
+/*Fin Footer*/
 
 /*# sourceMappingURL=destino.css.map */
